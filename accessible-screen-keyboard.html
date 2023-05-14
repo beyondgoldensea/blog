@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"beyondgoldensea.github.io","root":"/blog/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="契机近几个月人工智能可以说是最抢流量的话题之一了，笔者也不能免俗，一直都在尝试和摸索与AI共同进行写作、翻译等本职工作的可能性。不过在其他领域的应用方面几乎没动什么脑筋，直到又遇见了老冤家——《最终幻想6》。 以前也曾经在各大平台尝试过这款经典RPG，但终究因为各种原因没有坚持到底。前阵子发现史克威尔又拿像素重置版在主机平台炒了一波冷饭，才想起自己去年已经买过PC版了。于是又一次把它给捡了起来，也">
+<meta property="og:type" content="article">
+<meta property="og:title" content="残疾人怎么利用AI更好地玩游戏？——和ChatGPT一起做黑科技屏幕键盘">
+<meta property="og:url" content="https://beyondgoldensea.github.io/blog/accessible-screen-keyboard.html">
+<meta property="og:site_name" content="黄金之海的彼端">
+<meta property="og:description" content="契机近几个月人工智能可以说是最抢流量的话题之一了，笔者也不能免俗，一直都在尝试和摸索与AI共同进行写作、翻译等本职工作的可能性。不过在其他领域的应用方面几乎没动什么脑筋，直到又遇见了老冤家——《最终幻想6》。 以前也曾经在各大平台尝试过这款经典RPG，但终究因为各种原因没有坚持到底。前阵子发现史克威尔又拿像素重置版在主机平台炒了一波冷饭，才想起自己去年已经买过PC版了。于是又一次把它给捡了起来，也">
+<meta property="og:locale">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/%E8%B5%A4%E7%97%95.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514144604099.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514094101616.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514093620995.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514094701471.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514094448978.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514094904705.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514095119375.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514094836627.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514095531543.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514100417782.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514100629231.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514100328272.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514100438191.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514101136537.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514101531126.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514101336613.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514101707020.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514101359841.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514101924330.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514102039341.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514103314737.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514104109935.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514104311501.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514103713403.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514104223255.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514104410429.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514104548074.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514105326874.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514105221354.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514104835973.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514134039136.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514134732943.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514134925953.png">
+<meta property="article:published_time" content="2023-05-14T07:42:54.000Z">
+<meta property="article:modified_time" content="2023-05-14T07:44:37.245Z">
+<meta property="article:author" content="海的彼端">
+<meta property="article:tag" content="galgame,日语翻译,图书翻译">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/%E8%B5%A4%E7%97%95.jpg">
+
+<link rel="canonical" href="https://beyondgoldensea.github.io/blog/accessible-screen-keyboard.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'default'
+  };
+</script>
+
+  <title>残疾人怎么利用AI更好地玩游戏？——和ChatGPT一起做黑科技屏幕键盘 | 黄金之海的彼端</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="تشغيل شريط التصفح">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">黄金之海的彼端</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="default">
+    <link itemprop="mainEntityOfPage" href="https://beyondgoldensea.github.io/blog/accessible-screen-keyboard.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Author">
+      <meta itemprop="description" content="galgame制作与日语图书翻译">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黄金之海的彼端">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          残疾人怎么利用AI更好地玩游戏？——和ChatGPT一起做黑科技屏幕键盘
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Post created:2023-05-14 15:42:54 / Post modified:15:44:37" itemprop="dateCreated datePublished" datetime="2023-05-14T15:42:54+08:00">2023-05-14</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="契机"><a href="#契机" class="headerlink" title="契机"></a>契机</h1><p>近几个月人工智能可以说是最抢流量的话题之一了，笔者也不能免俗，一直都在尝试和摸索与AI共同进行写作、翻译等本职工作的可能性。不过在其他领域的应用方面几乎没动什么脑筋，直到又遇见了老冤家——《最终幻想6》。</p>
+<p>以前也曾经在各大平台尝试过这款经典RPG，但终究因为各种原因没有坚持到底。前阵子发现史克威尔又拿像素重置版在主机平台炒了一波冷饭，才想起自己去年已经买过PC版了。于是又一次把它给捡了起来，也不知道这次能不能顺利来到最终boss面前。</p>
+<p>不过玩着玩着发现，作为一名肢体残障人士，多年来玩游戏遇到的障碍始终无法得到好的解决，所以笔者心血来潮，突然开始琢磨：</p>
+<p>有没有一种可能，让AI替我设计一款完全化解个人痛点的游戏辅助工具呢？</p>
+<p>于是就有了这篇文字中记录的整个过程。</p>
+<span id="more"></span>
+
+<p>（本项目最终成品代码：<a target="_blank" rel="noopener" href="https://flowus.cn/share/605b4bb5-16f4-48ad-8a90-61cd96767226">AI设计的屏幕键盘</a>）</p>
+<h1 id="个人情况和需求"><a href="#个人情况和需求" class="headerlink" title="个人情况和需求"></a>个人情况和需求</h1><p>笔者患有神经肌肉类疾病，全身几乎无法活动，平时都是靠左手拇指与食指操作轨迹球鼠标或语音识别来控制各种设备（这里吐槽一句，罗技的木星轨迹球怎么就停产了啊，搞得现在新品价格涨到以往的10倍不止）。</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/%E8%B5%A4%E7%97%95.jpg" alt="赤痕"></p>
+<p>作为几十年如一日的骨灰级玩家，笔者也试用过不少黑科技来帮助自己游戏。比如大名鼎鼎的语音控制工具——Voice attack、各种屏幕键盘甚至朋友替我特制的主机专用虚拟手柄转接器（尽管是过去式了，但那件设备真的非常有用，伴我度过了整个ps3和ps4时代）。</p>
+<p>其中，语音控制类工具虽然功能强大，但毕竟比鼠标直接操作要慢半拍，而且特别费嗓子（笔者有慢性咽炎）。除了工作时不都不用以外，玩非动作类的游戏还是不太想劳它大驾。</p>
+<p>所以只要设置好按键，屏幕键盘似乎是最优解。可惜Windows系统自带的屏幕键盘因为功能简陋、可自定义程度低，早已被我扔进回收站。</p>
+<p>笔者目前主要使用的屏幕键盘是Hot Virtual Keyboard，这也是一款老牌工具了，不仅有各种主题，还能调整按键位置、设计简单的指令脚本，其实是很推荐的。但是，就连它也无法满足游戏中经常遇到的需求——<strong>同时按下若干个键</strong>，最典型的例子是控制人物八方向移动（向左上方走就要同时按下w和a键），比如在玩《最终幻想6》的时候就很需要。</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514144604099.png" alt="Hot Virtual Keyboard很好用，可惜不支持同时按下"></p>
+<p>显然，鼠标光标只有一个，而我又只有一根拇指可以用，要想在屏幕键盘上同时按下两个以上的按键，只能设置对应多个键盘按键的虚拟按钮。遗憾的是，目前市面上并没有能够实现这一功能的屏幕键盘。</p>
+<p>这个问题困扰笔者很久，虽然中间曾通过按键精灵脚本勉强绕过，但按键精灵类工具容易与各种系统热键发生冲突或导致误操作，使用也不是很方便。</p>
+<p>笔者几乎是个编程小白，只是少年时稍微学过一点C语言，去年也心血来潮了解过Python的基本语法，自认是没本事丰衣足食的。</p>
+<p>所以我一般会通过语音控制让计算机先替我按住一个键盘按键，然后自己再去按屏幕键盘上的另一个按钮，这样虽然挺费事的，却也能大致应付游戏需要了。</p>
+<p>然而现在，我们有了ChatGPT。</p>
+<h1 id="制作过程"><a href="#制作过程" class="headerlink" title="制作过程"></a>制作过程</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>毕竟只是做一款个人用的小工具，选择Python作为编程语言从各种意义上说都是合适的，因此我们需要的工具很简单：</p>
+<ul>
+<li>一款脚本语言编辑器（我用的是visual studio code）</li>
+<li>一位人工智能乙方（因为有plus账户，我用的是ChatGPT4，理论上3.5也可以；本来的打算是如果ChatGPT搞不定，就去求助Google的Bard，但因为后者只能通过英文交流，还是有点抗拒）</li>
+</ul>
+<p>整理出的需求如下：</p>
+<ul>
+<li>一个至少有26个虚拟按钮的窗口（16个按钮给左右摇杆，其余给手柄功能键）</li>
+<li>每个虚拟按钮都可以对应一个或两个以上键盘按键</li>
+<li>按钮对应的键盘按键可以自定义</li>
+<li>窗口大小和按钮位置可以自由调整</li>
+<li><strong>（重要）</strong>该窗口不能获得窗口焦点，因为要用来操作别的窗口，所以要始终保持窗口焦点在对象窗口中（也是屏幕键盘的标配）</li>
+</ul>
+<h2 id="保证基本功能"><a href="#保证基本功能" class="headerlink" title="保证基本功能"></a>保证基本功能</h2><p>首先，作为甲方的我们发出第一条prompt。</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514094101616.png" alt="image-20230514093620995"></p>
+<p>细节部分和上面的需求可能有出入，毕竟一开始有些地方还没考虑到，不过总的方向已经确定了。</p>
+<p>乙方反馈：</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514093620995.png" alt="image-20230514094101616"></p>
+<p>一直都是这么干净利落，直接给成品代码，运行结果如下：</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514094701471.png" alt="image-20230514094448978"></p>
+<p>看起来挺正常，对吧？</p>
+<p>然而并不是。</p>
+<p>窗口不停闪烁，点击后也会立刻获取焦点，没办法操作目标窗口。</p>
+<p>于是我们进行反馈。</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514094448978.png" alt="image-20230514094701471"></p>
+<p>emmm，这个甲方还挺客气的，其他功能还可以？意思是长得像而已啦……</p>
+<p>乙方表现的情商也很高：</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514094904705.png" alt="image-20230514094836627"></p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514095119375.png" alt="image-20230514094904705"></p>
+<p>窗口始终在最前，又不获取焦点，好像真的是屏幕键盘。</p>
+<p>实际情况如何？</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514094836627.png" alt="image-20230514095119375"></p>
+<p>看起来更像一个正常的窗口了，不光有标题栏，还能随意拖动和调整大小（从这些额外因素看，甚至连最终成品都比它要差一些）。</p>
+<p>可惜……</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514095531543.png" alt="image-20230514095531543"></p>
+<p>我明明将焦点移到了windows便签，可是按下屏幕键盘上的按钮后，焦点仍然回到了屏幕键盘，无法在文字编辑区输入结果。</p>
+<p>后来想了一下，最基本的要求其实是保证焦点停在对象窗口，而不是让屏幕键盘始终保持最前，于是对需求稍作修改：</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514100417782.png" alt="image-20230514100328272"></p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514100629231.png" alt="image-20230514100417782"></p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514100328272.png" alt="image-20230514100438191"></p>
+<p>win32龟？什么东西？……先不去管他，看结果。</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514100438191.png" alt="image-20230514100629231"></p>
+<p>怎么比前一版更难看了？少了标题栏，不能调整窗口大小，也不能移动窗口了。</p>
+<p>但是但是……</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514101136537.png" alt="image-20230514101136537"></p>
+<p>可以在便签输入文字了！</p>
+<p><strong>这也就意味着焦点问题得到解决，离真正实用只有一步之遥了。</strong></p>
+<h2 id="调整到完成"><a href="#调整到完成" class="headerlink" title="调整到完成"></a>调整到完成</h2><p>从现在起，我们的目标是让这款屏幕键盘真正玩起游戏！</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514101531126.png" alt="image-20230514101336613"></p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514101336613.png" alt="image-20230514101359841"></p>
+<p>看起来ChatGPT又一次读懂了我们的意思，实际跑一下看看吧。</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514101707020.png" alt="image-20230514101531126"></p>
+<p>？？？</p>
+<p>一根又粗又长的……棍子？</p>
+<p>虽然多了个“X”按钮，能用来关闭程序，鼠标拖动空白处也确实可以移动窗口了，不过这也太……</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514101359841.png" alt="image-20230514101707020"></p>
+<p>立即吐槽不可描述的形状。</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514101924330.png" alt="image-20230514101924330"></p>
+<p>改正态度积极，然而</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514102039341.png" alt="image-20230514102039341"></p>
+<p>这是目前为止第一次无法启动，怎么还开倒车了？</p>
+<p>反馈后得到的结果是：</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514103314737.png" alt="image-20230514103314737"></p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514104109935.png" alt="image-20230514103713403"></p>
+<p>查看代码可以发现其中有一行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root.geometry(<span class="string">&quot;800x400+100+100&quot;</span>)  <span class="comment"># 长度x宽度+X轴位置+Y轴位置</span></span><br></pre></td></tr></table></figure>
+
+<p>在这里我们可以设定窗口的初始位置和大小，虽然这个窗口目前不能自由调整，但是这样也算满足了我们最初的需要。</p>
+<p>接下来就是关于按键设置的问题：</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514104311501.png" alt="image-20230514104109935"></p>
+<p>这毕竟是我们最关心的问题嘛，ChatGPT的回答简洁干脆：</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514103713403.png" alt="image-20230514104223255"></p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514104223255.png" alt="image-20230514104311501"></p>
+<p>但是结果又无法运行，反馈后得到的回复是：</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514104410429.png" alt="image-20230514104410429"></p>
+<p>别说，这个bug还有点蠢萌，但是用了它修改后的代码，结果依然是</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514104548074.png" alt="image-20230514104548074"></p>
+<p>好吧，总之就是指定的列表元素不够按键数量呗，我们可以自己调整。</p>
+<p>为了让布局再舒服一点，ChatGPT又为我们做了一些改进：</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514105326874.png" alt="image-20230514104835973"></p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514105221354.png" alt="image-20230514105221354"></p>
+<p>到此为止，我们已经可以在代码中调整虚拟按钮出现的位置和窗口位置、大小，后面只剩下一些枯燥的微调工作，最终窗口如下：</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514104835973.png" alt="image-20230514105326874"></p>
+<p>不不不，不许说丑！又又又，又没逼着你们用，我自己欣赏还不行吗？！</p>
+<p>……</p>
+<p>玩游戏时是这样的：</p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514134039136.png" alt="可以看到当我按下W+A时，林克便向左上方奔跑。"></p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514134732943.png" alt="这次是左下方。"></p>
+<p><img src="https://raw.githubusercontent.com/beyondgoldensea/forwriting/main/img/image-20230514134925953.png" alt="主要就是为了玩它。"></p>
+<p><strong>可以看出，这款屏幕键盘对一般的PC游戏和模拟器都能顺利兼容，大功告成！</strong></p>
+<h1 id="总结与展望"><a href="#总结与展望" class="headerlink" title="总结与展望"></a>总结与展望</h1><p>自孤独面对窗外世界的少年时代起，游戏就是笔者最忠实的玩伴。但因为身体原因，想玩最新的游戏或者把老游戏玩得舒服，我也不得不付出比常人更多的钻研精力。</p>
+<p>这个过程虽然辛苦，却也快乐。</p>
+<p>如今我们一只脚已经踏入AI时代的大门，作为一名残障人士，似乎能看到更多的希望。所以笔者也很想和大家一起尝试各种新鲜的应用方式，来让我们的工作、生活和娱乐变得更轻松有趣。</p>
+<p>生命在于折腾。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/christianity-and-hell.html" rel="prev" title="基督教信仰与地狱的问题">
+      <i class="fa fa-chevron-left"></i> 基督教信仰与地狱的问题
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A5%91%E6%9C%BA"><span class="nav-number">1.</span> <span class="nav-text">契机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E6%83%85%E5%86%B5%E5%92%8C%E9%9C%80%E6%B1%82"><span class="nav-number">2.</span> <span class="nav-text">个人情况和需求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">制作过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">3.1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%9D%E8%AF%81%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD"><span class="nav-number">3.2.</span> <span class="nav-text">保证基本功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B0%83%E6%95%B4%E5%88%B0%E5%AE%8C%E6%88%90"><span class="nav-number">3.3.</span> <span class="nav-text">调整到完成</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E4%B8%8E%E5%B1%95%E6%9C%9B"><span class="nav-number">4.</span> <span class="nav-text">总结与展望</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Author</p>
+  <div class="site-description" itemprop="description">galgame制作与日语图书翻译</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Author</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/muse.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '093f4e852dbb4a864d9a',
+      clientSecret: '83e8aebf1c0ff3cab1187a7b820f18768d618f74',
+      repo        : 'blog',
+      owner       : 'beyondgoldensea',
+      admin       : ['beyondgoldensea'],
+      id          : '702cbdc89c51527a87f23ce574f10d31',
+        language: 'zh-CN',
+      distractionFreeMode: false
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>
